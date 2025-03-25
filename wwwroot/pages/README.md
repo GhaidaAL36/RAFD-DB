@@ -34,6 +34,20 @@ The project consists of the following files and directories:
   - `user-dashboard.html`: Contains the HTML structure for the user dashboard page.
 - **README.md**: Documentation for the project, explaining its purpose and how to use it.
 
+## Installation
+To set up the RAFD project locally, follow these steps:
+
+1. **Clone the repository**:
+   ```sh
+   git clone <repository-url>
+   ```2. **Navigate to the project directory**:   ```sh
+   cd RAFDDB
+   ```
+
+3. **Open the project in your preferred code editor**.
+
+4. **Open `index.html` in your web browser** to start using the RAFD platform.
+
 ## Usage
 To use the RAFD platform, navigate to the `index.html` file in your web browser. From there, you can access various features, including account creation, login, and the comparison tool.
 
@@ -41,3 +55,5 @@ To use the RAFD platform, navigate to the `index.html` file in your web browser.
 - Implement additional features for personalized financing recommendations.
 - Enhance the user interface for better user experience.
 - Integrate backend services for real-time data processing and offer comparisons.
+
+
