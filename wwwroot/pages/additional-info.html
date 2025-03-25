@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/create-account-login.css" />
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <!-- scripts -->
+    <script src="../js/header-footer.js"></script>
+    <title>RAFD-HOME PAGE</title>
+  </head>
+  <body>
+    <!-- header section -->
+    <header id="header-section">
+      <img
+        class="circle-svg"
+        src="../assets/small-Ellipse-design.svg"
+        alt="SVG Circle"
+      />
+
+      <!-- menu bar -->
+      <div class="container navbar-container">
+        <div class="navbar">
+          <a class="logo" href="#">رفد</a>
+
+          <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <ul class="nav-links">
+            <li><a href="index.html" class="menu-item"> الرئيسية</a></li>
+            <li><a href="comparison.html" class="menu-item">حاسبة العروض</a></li>
+            <li><a href="#footer-section" class="menu-item">تواصل معنا</a></li>  
+            <li><a href="login.html" class="login-btn">تسجيل الدخول</a></li>
+            <li><a href="create-account.html" class="menu-item">انشاء حساب</a></li>         
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- create account box -->
+    <div class="container create-account-container">
+      <h1>انشاء حساب</h1>
+      <h5>انشى حسابك الان في امان</h5>
+      <div class="form-container">
+        <form action="/auth/complete-registration" method="post" class="auth-from">
+            <label for="userAge">Age</label>
+            <input type="number" id="userAge" name="userAge" />
+          
+            <label for="userNationalID">National ID</label>
+            <input type="text" id="userNationalID" name="userNationalID" />
+          
+            <label for="userJopType">Job Type</label>
+            <input type="text" id="userJopType" name="userJopType" />
+          
+            <label for="creditScore">Credit Score</label>
+            <input type="number" id="creditScore" name="creditScore" />
+          
+            <label for="userContactNum">Contact Number</label>
+            <input type="text" id="userContactNum" name="userContactNum" />
+          
+            <label for="userSalary">Salary</label>
+            <input type="number" id="userSalary" name="userSalary" />
+          
+            <button type="submit" class="secondary-btn">Complete Registration</button>
+          </form>
+          
+        
+        
+
+        <p>لديك حساب بالفعل ؟<a href="login.html">سجل الدخول هنا</a></p>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <footer id="footer-section">
+      <div class="footer-container">
+        <section id="contact-section" class="contact-section">
+          <div class="footer-title">
+            <h1>تواصل معنا</h1>
+            <img src="../assets/contact-icon.svg" alt="" />
+          </div>
+          <p>نحن هنا للإجابة على جميع استفساراتك</p>
+          <div class="icon">
+            <h6>RAFD@gmail.com</h6>
+            <img src="../assets/email-icon.svg" alt="" />
+          </div>
+        </section>
+        <div class="footer">
+          <div class="footer-logo">
+            <a href="#" class="logo">رفد</a>
+            <h6>رفد - منصة التمويل الذكي</h6>
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html#header-section">الرئيسية</a></li>
+              <li><a href="index.html#about-us-section">من نحن</a></li>
+              <li><a href="comparison.html">حاسبة العروض</a></li>
+              <li><a href="#contact-section">تواصل معنا</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img
+        class="footer-svg"
+        src="../assets/small-Ellipse-design.svg"
+        alt="Footer SVG"
+      />
+    </footer>
+  </body>
+</html>

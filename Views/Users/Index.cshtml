@@ -1,0 +1,35 @@
+@model IEnumerable<RAFD.Models.User>
+
+<h2>Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>National ID</th>
+            <th>Job Type</th>
+            <th>Credit Score</th>
+            <th>Contact</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.UserEmail</td>
+                <td>@user.UserAge</td>
+                <td>@user.UserNationalID</td>
+                <td>@user.UserJopType</td>
+                <td>@user.CreditScore</td>
+                <td>@user.UserContactNum</td>
+                <td>@user.UserSalary</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Add User</a>
