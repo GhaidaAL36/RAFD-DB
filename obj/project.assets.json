@@ -4684,11 +4684,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gigi\\OneDrive\\سطح المكتب\\RAFD-DB-master\\RAFDDB.csproj",
+      "projectUniqueName": "C:\\Users\\gigi\\RAFDDB\\RAFDDB.csproj",
       "projectName": "RAFDDB",
-      "projectPath": "C:\\Users\\gigi\\OneDrive\\سطح المكتب\\RAFD-DB-master\\RAFDDB.csproj",
+      "projectPath": "C:\\Users\\gigi\\RAFDDB\\RAFDDB.csproj",
       "packagesPath": "C:\\Users\\gigi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gigi\\OneDrive\\سطح المكتب\\RAFD-DB-master\\obj\\",
+      "outputPath": "C:\\Users\\gigi\\RAFDDB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gigi\\AppData\\Roaming\\NuGet\\NuGet.Config"

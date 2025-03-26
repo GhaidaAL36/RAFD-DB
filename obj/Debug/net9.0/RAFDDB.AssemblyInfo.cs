@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RAFDDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+819e7e6fef666827740d51ca59ad233c9e88420e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RAFDDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RAFDDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
