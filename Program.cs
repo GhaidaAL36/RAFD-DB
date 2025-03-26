@@ -1,10 +1,7 @@
 using RAFD.Models;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
 using System.Security.Cryptography;
 using System.Text;
-=======
->>>>>>> 1a979dacd0c6381e2fa2f77ee969afe5dfe987de
 
 
 var builder = WebApplication.CreateBuilder(args);
