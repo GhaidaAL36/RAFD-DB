@@ -1,0 +1,31 @@
+@model RAFD.Models.User
+
+<h2>Create User</h2>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="UserEmail"></label>
+        <input asp-for="UserEmail" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="UserAge"></label>
+        <input asp-for="UserAge" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="UserSalary"></label>
+        <input asp-for="UserSalary" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="UserContactNum"></label>
+        <input asp-for="UserContactNum" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="UserNationalID"></label>
+        <input asp-for="UserNationalID" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
