@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="../css/comparison.css" />
     <!-- scripts -->
     <script src="../js/header-footer.js"></script>
-    <script src="../js/comparison.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <script src="../js/dashboard.js" defer></script>
     <title>RAFD-COMPARISON</title>
   </head>
   <body>
@@ -58,19 +57,16 @@
           </div>
           <div class="form-group">
             <label for="requested-amount">المبلغ المطلوب</label>
-            <input
-              type="number"
-              id="requested-amount"
-              name="requested-amount"
-              required
-            />
+            <input type="number" id="requested-amount" name="requested-amount" required />
           </div>
           <div class="form-group">
             <label for="duration">المدة</label>
             <input type="number" id="duration" name="duration" required />
           </div>
-          <button type="submit" class="secondary-btn">قارن الآن</button>
+          <button type="submit">قارن الآن</button>
         </form>
+        
+        
       </div>
     </section>
 
@@ -110,6 +106,7 @@
       />
     </footer>
 
-
+    <script src="../js/comparison.js"></script>
+    <script src="../js/selected-offers.js"></script>
   </body>
 </html>

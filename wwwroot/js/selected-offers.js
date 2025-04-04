@@ -1,29 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const offersContainer = document.getElementById("offers-list");
-    const offers = JSON.parse(sessionStorage.getItem("offers"));
+window.addEventListener('DOMContentLoaded', async () => {
+  const params = new URLSearchParams(window.location.search);
+  const salary = parseFloat(params.get('salary'));
+  const amount = parseFloat(params.get('amount'));
+  const duration = parseInt(params.get('duration'));
 
-    if (!offers || offers.length === 0) {
-        offersContainer.innerHTML = '<p>لا توجد عروض متاحة.</p>';
-        return;
+  try {
+    const response = await fetch('http://localhost:5102/api/loan-comparison/get-matches', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ salary, amount, duration })
+    });
+
+    const container = document.getElementById('offers-list');
+    container.innerHTML = '';
+
+    if (!response.ok) {
+      container.innerHTML = `<p>لا توجد عروض مناسبة لك حاليًا.</p>`;
+      return;
     }
 
+    const offers = await response.json();
+
     offers.forEach(offer => {
-        const offerElement = document.createElement("div");
-        offerElement.classList.add("offer-card");
-
-        offerElement.innerHTML = `
-            <h2>${offer.bank}</h2>
-            <p>نسبة الفائدة: ${offer.interestRate}%</p>
-            <p>القسط الشهري: ${offer.monthlyInstallment} ريال</p>
-    
-            <div class="extra-info">
-                
-                <p>مدة السداد: ${offer.duration} شهر</p>
-                <p>إجمالي السداد: ${offer.totalRepayment} ريال</p>
-                <a href="#" class="apply-btn">قدم بطلب القرض</a>
-            </div>
-        `;
-
-        offersContainer.appendChild(offerElement);
+      const html = `
+        <div class="offer-card">
+          <h2>البنك: ${offer.bankName}</h2>
+          <h4>نسبة الفائدة: ${offer.interestRate}%</h4>
+          <p>المبلغ: ${offer.loanAmount} ريال</p>
+          <p>المدة: ${offer.duration} أشهر</p>
+          
+          <p>القسط الشهري: ${offer.monthlyPayment} ريال</p>
+        </div>
+      `;
+      container.innerHTML += html;
     });
+  } catch (err) {
+    console.error(err);
+    document.getElementById('offers-list').innerHTML = '<p>حدث خطأ أثناء تحميل العروض.</p>';
+  }
 });
